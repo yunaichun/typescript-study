@@ -4,7 +4,6 @@ var HTTP_CODE;
 (function (HTTP_CODE) {
     HTTP_CODE[HTTP_CODE["OK"] = 200] = "OK";
     HTTP_CODE[HTTP_CODE["NOT_FOUND"] = 404] = "NOT_FOUND";
-    HTTP_CODE["tea"] = "1231";
 })(HTTP_CODE || (HTTP_CODE = {}));
 var res = 200;
 if (res === HTTP_CODE.OK) {

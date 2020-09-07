@@ -4,7 +4,8 @@
     "target": "es3",
     "module": "umd",
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "noImplicitAny": true
   },
   "include": [
     "./src/**/*"
