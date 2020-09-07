@@ -47,10 +47,29 @@ let p4: Point4 = {
 };
 p4.t = 10;
 p4[1] = 1;
-
-
 // == 注意：number 类型必须是 string 类型的子类型
 interface Point5 {
     [prop1: string]: Object,
     [prop2: number]: number
 };
+
+
+// == 4.对象数组
+interface Obj {
+    x: number,
+    y: string,
+    arr: Arr[],
+}
+interface Arr {
+    id: number,
+    name: string
+}
+let obj: Obj = {
+    x: 1,
+    y: '2',
+    arr: [{
+        id: 1,
+        name: '1231',
+    }]
+}
+obj.arr[0].id;
