@@ -2,7 +2,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "target": "es3",
-    "module": "umd"
+    "module": "umd",
+    "strict": true,
+    "strictNullChecks": true
   },
   "include": [
     "./src/**/*"
