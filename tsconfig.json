@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "es3",
+    "module": "umd"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
