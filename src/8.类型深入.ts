@@ -25,13 +25,32 @@ let obj22: o2 = {
     z: 3
 }
 let obj33: o1 & o2 = {...obj11, ...obj22}
+type o4 = o1 & o2;
+let obj44: o4 = {...obj11, ...obj22};
 
 
 // == 3、字面量类型
 function setPosition1(ele: Element, direction: 'left' | 'top' | 'right' | 'bottom') {
 }
 
+
 // == 4、类型别名
-type dir = 'left' | 'top' | 'right' | 'bottom'
+type dir = 'left' | 'top' | 'right' | 'bottom';
 function setPosition2(ele: Element, direction: dir) {
+}
+
+
+// == 5、类型推导
+function fn111(x = 1) {
+}
+function fn222(x: number, y:number) {
+    return x + y;
+}
+
+
+// == 6、类型断言
+let img1 = <HTMLImageElement>document.querySelector('.box');
+let img2 = document.querySelector('.box') as HTMLImageElement;
+if (img1) {
+    img1.src
 }
