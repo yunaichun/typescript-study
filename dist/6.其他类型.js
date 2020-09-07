@@ -33,3 +33,13 @@ var arr = ['a', 'b', 'c'];
 foreach(arr, function (k, v) {
     console.log(k, v);
 });
+// == 6、函数参数可选、多类型
+function reverse(x, y) {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    }
+    else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+    return null;
+}
