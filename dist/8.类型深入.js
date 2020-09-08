@@ -28,3 +28,22 @@ var obj22 = {
     z: 3
 };
 var obj33 = __assign(__assign({}, obj11), obj22);
+var obj44 = __assign(__assign({}, obj11), obj22);
+// == 3、字面量类型
+function setPosition1(ele, direction) {
+}
+function setPosition2(ele, direction) {
+}
+// == 5、类型推导
+function fn111(x) {
+    if (x === void 0) { x = 1; }
+}
+function fn222(x, y) {
+    return x + y;
+}
+// == 6、类型断言
+var img1 = document.querySelector('.box');
+var img2 = document.querySelector('.box');
+if (img1) {
+    img1.src;
+}
