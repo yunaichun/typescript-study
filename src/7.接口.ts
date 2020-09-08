@@ -52,24 +52,3 @@ interface Point5 {
     [prop1: string]: Object,
     [prop2: number]: number
 };
-
-
-// == 4.对象数组
-interface Obj {
-    x: number,
-    y: string,
-    arr: Arr[],
-}
-interface Arr {
-    id: number,
-    name: string
-}
-let obj: Obj = {
-    x: 1,
-    y: '2',
-    arr: [{
-        id: 1,
-        name: '1231',
-    }]
-}
-obj.arr[0].id;
