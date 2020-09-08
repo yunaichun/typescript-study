@@ -28,15 +28,3 @@ function fn4(a: any) {
 // == 4、unknown 类型【没有属性和方法，any是有的】
 let t3: unknown;
 // t3.indexOf(); //错误
-
-
-// == 5、函数类型
-function foreach(data: string[], callback: (k: number, v: string) => void) {
-    for (let i: number = 0; i < data.length; i++) {
-        callback(i, data[i]);
-    }
-}
-let arr = ['a', 'b', 'c'];
-foreach(arr, function(k, v) {
-    console.log(k, v)
-});

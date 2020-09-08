@@ -23,13 +23,3 @@ function fn4(a) {
 // == 4、unknown 类型【没有属性和方法，any是有的】
 var t3;
 // t3.indexOf(); //错误
-// == 5、函数类型
-function foreach(data, callback) {
-    for (var i = 0; i < data.length; i++) {
-        callback(i, data[i]);
-    }
-}
-var arr = ['a', 'b', 'c'];
-foreach(arr, function (k, v) {
-    console.log(k, v);
-});
