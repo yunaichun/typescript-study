@@ -55,12 +55,12 @@ interface Point5 {
 
 
 // == 4、函数属性
-interface Point5 {
+interface Point6 {
     name: string,
     say(): number,
     say2: () => number
 };
-const p5: Point5 = {
+const p5: Point6 = {
     name: '1',
     say: () => {
         return 1;
@@ -70,7 +70,6 @@ const p5: Point5 = {
     }
 }
 
-
 // == 5、接口定义函数
 interface SayHi {
     (a: string): string
@@ -78,4 +77,16 @@ interface SayHi {
 type SayHi2 = (a: string) => string;
 const sayHi: SayHi = (word: string) => {
     return word;
+}
+
+
+// == 6、class 应用接口
+class User implements Point6 {
+    name = '1';
+    say() {
+        return 1;
+    }
+    say2() {
+        return 2;
+    }
 }
