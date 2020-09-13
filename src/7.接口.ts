@@ -52,3 +52,30 @@ interface Point5 {
     [prop1: string]: Object,
     [prop2: number]: number
 };
+
+
+// == 4、函数属性
+interface Point5 {
+    name: string,
+    say(): number,
+    say2: () => number
+};
+const p5: Point5 = {
+    name: '1',
+    say: () => {
+        return 1;
+    },
+    say2: () => {
+        return 2;
+    }
+}
+
+
+// == 5、接口定义函数
+interface SayHi {
+    (a: string): string
+}
+type SayHi2 = (a: string) => string;
+const sayHi: SayHi = (word: string) => {
+    return word;
+}
