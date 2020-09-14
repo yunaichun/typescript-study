@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./ts-dist",
     "target": "es5",
     "module": "umd",
     "strict": true,
@@ -10,6 +10,6 @@
     "emitDecoratorMetadata": true
   },
   "include": [
-    "./src/**/*"
+    "ts/**/*"
   ]
 }
