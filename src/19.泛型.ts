@@ -1,4 +1,4 @@
-// == 1、函数泛型（generic 泛指的类型）
+// == 1、泛型-函数（generic 泛指的类型）
 function join<T, P>(first: T, second: P) {
     return `${first}${second}`;
 }
@@ -13,7 +13,7 @@ function map<T>(params: Array<T>) {
 map<string>(['123']);
 
 
-// == 2、类泛型
+// == 2、泛型-类
 interface Item { name: string }
 // == 泛型 T 只能是 number|string|Item
 class DataManager<T extends number|string|Item> {
@@ -32,4 +32,24 @@ function hello<T>(params: T) {
     return params;
 }
 const func: <T>(param: T) => T = hello;
-  
+
+
+// == 4、泛型-keyof（keyof 操作类型，typeof操作值）
+interface Person110 {
+    name: string;
+    age: number;
+    gender: string;
+}
+class Teacher110 {
+    constructor(private info: Person110) {}
+    // == keyof Person110 为 'name'|'age'|'gender'
+    getInfo<T extends keyof Person110>(key: T): Person110[T] {
+        return this.info[key];
+    }
+}
+const teacher110 = new Teacher110({
+    name: 'dell',
+    age: 18,
+    gender: 'male'
+});
+console.log(teacher110.getInfo('name'));
