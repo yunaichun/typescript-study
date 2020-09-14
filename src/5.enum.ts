@@ -14,3 +14,18 @@ enum URLS {
     LOGIN = 'login',
     LOGOUT = 'logout',
 }
+
+
+
+// == 3、默认从 0 开始
+const Status = {
+    OFFLINE: 0,
+    ONLINE: 1,
+    DELETED: 2
+}
+enum Status1 {
+    OFFLINE,
+    ONLINE,
+    DELETED
+}
+console.log(Status1.OFFLINE, Status1[0]); // 0 OFFLINE
