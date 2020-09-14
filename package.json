@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --pretty",
-    "ts": "ts-node ./src/5.枚举类型.ts"
+    "dev": "ts-node ./src/19.范型.ts"
   },
   "author": "",
   "license": "ISC"
