@@ -1,11 +1,37 @@
-// == 1、泛型-函数（generic 泛指的类型）
+// == 1、泛型-数组
+// == Array<number> 为数组的范型写法，等价于 number[]
+let test111: Array<number> = [1,2,3];
+let test222: number[] = [1,2,3];
+
+
+// == 2、泛型-接口
+interface Result<T>{
+    success: boolean,
+    errmsg?: string,
+    data: T,
+}
+const getResponseData = <T>(data: T, errmsg: string): Result<T> => {
+    if (errmsg) {
+        return {
+            success: false,
+            errmsg,
+            data,
+        }
+    }
+    return {
+        success: true,
+        data,
+    }
+}
+
+
+// == 3、泛型-函数（generic 泛指的类型）
 function join<T, P>(first: T, second: P) {
     return `${first}${second}`;
 }
 // == 在使用的时候才确定类型（也可以不写<number, string>）
 join<number, string>(1, '1');
 join(1, '1');
-
 // == Array<T> 为数组的范型写法，等价于 T[]
 function map<T>(params: Array<T>) {
     return params;
@@ -13,7 +39,7 @@ function map<T>(params: Array<T>) {
 map<string>(['123']);
 
 
-// == 2、泛型-类
+// == 4、泛型-类
 interface Item { name: string }
 // == 泛型 T 只能是 number|string|Item
 class DataManager<T extends number|string|Item> {
@@ -27,14 +53,14 @@ const dataManager = new DataManager<number|string|Item>([1, '2', {name: '2'}]);
 console.log(dataManager.getItem(0));
 
 
-// == 3、泛型-类型注解
+// == 5、泛型-类型注解
 function hello<T>(params: T) {
     return params;
 }
 const func: <T>(param: T) => T = hello;
 
 
-// == 4、泛型-keyof（keyof 操作类型，typeof操作值）
+// == 6、泛型-keyof（keyof 操作类型，typeof操作值）
 interface Person110 {
     name: string;
     age: number;
