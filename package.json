@@ -6,24 +6,30 @@
   "scripts": {
     "dev:ts": "ts-node ./ts/27.参数装饰器.ts",
     "build:ts": "tsc --pretty",
-    "build:flow": "flow-remove-types flow/ -d flow-dist/",
-    "build:ts-by-webpack": "webpack --config webpack.ts.config.js",
-    "build:flow-by-webpack": "webpack --config webpack.flow.config.js"
+    "build:ts-wk": "webpack --config webpack.ts.config.js",
+    "build:flow": "flow && flow-remove-types flow/ -d flow-dist/",
+    "build:flow-wk": "flow && webpack --config webpack.flow.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-flow": "^7.10.4",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "clean-webpack-plugin": "^3.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "flow-bin": "^0.133.0",
     "flow-remove-types": "^2.133.0",
     "ts-loader": "^8.0.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^4.0.0-beta.2"
-  },
-  "dependencies": {}
+  }
 }
