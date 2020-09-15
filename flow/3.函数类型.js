@@ -1,4 +1,5 @@
-// @flow
+/* @flow */
+
 // 函数声明 
 function getLength(str: string): number {
     return str.length;
