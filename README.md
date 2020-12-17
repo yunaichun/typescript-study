@@ -2,7 +2,6 @@
 
 此项目是学习 TypeScript 和 Flow 语法检测的项目，记录学习的点滴，方便以后忘记可以从学习轨迹中迅速上手。
 
-
 ## 学习参考
 
 - [TypeScript 官方文档](http://www.typescriptlang.org)
